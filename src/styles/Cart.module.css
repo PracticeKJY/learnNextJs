@@ -1,0 +1,19 @@
+.title {
+  color: black;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.cartItem {
+  margin: 0 30%;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #303030;
+  /* line-height: 0px; */
+}
