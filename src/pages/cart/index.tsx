@@ -8,7 +8,7 @@ interface productInfo {
 
 interface CartItemProps {
   product: productInfo
-  key: number
+  index: number
 }
 
 const Cart = () => {
@@ -17,14 +17,6 @@ const Cart = () => {
     { name: "파스타", price: 12, count: 5 },
     { name: "코코넛", price: 5, count: 2 },
   ]
-
-  // const totalPrice: number = productInfo.reduce((acc, cur) => {
-  //   return acc + cur.price * cur.count
-  // }, 0)
-
-  // const totalCount: number = productInfo.reduce((acc, cur) => {
-  //   return acc + cur.count
-  // }, 0)
 
   const { totalPrice, totalCount } = productInfo.reduce(
     (acc, cur) => {
@@ -40,7 +32,7 @@ const Cart = () => {
     <div>
       <h2 className={styles.title}>장바구니</h2>
       {productInfo.map((product, index) => {
-        return <CartItem product={product} key={index} />
+        return <CartItem product={product} key={index} index={index} />
       })}
       <div className={styles.cartItem}>
         <p>합계 : </p>
